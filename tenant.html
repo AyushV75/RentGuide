@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landlords</title>
+    <script src="../../RentalGuide2/assets/js/lib/jquery-2.1.4.js"></script>
+    <script src="../../RentalGuide2/assets/js/lib/jquery.validate.js"></script>
+    <!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
+    <link rel="stylesheet" href="../../RentalGuide2/assets/css/lib/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="../../RentalGuide2/assets/css/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <script src="../../RentalGuide2/assets/js/database.js"></script>
+    <script src="../../RentalGuide2/assets/js/DAL.js"></script>
+    <script src="../../RentalGuide2/assets/js/eventclass.js"></script>
+    <script src="../../RentalGuide2/assets/js/facade.js"></script>
+    <script src="../../RentalGuide2/assets/js/util.js"></script>
+    <script src="../../RentalGuide2/assets/js/global.js"></script></head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <h1>RentGuide</h1>
+    </div>
+</header>
+<!--Header Ends HERE-->
+
+<!--Menu Starts HERE-->
+<!--<nav class="menu">-->
+<!--    <div class="wrapper">-->
+<!--        <ul>-->
+<!--            <a href="index.html"><li>Home</li></a>-->
+<!--            <a href="landlords.html"><li>Landlord</li></a>-->
+<!--            <a href="tenant.html"><li>Tenant</li></a>-->
+<!--            <a href="FAQ.html"><li>FAQ</li></a>-->
+<!--            <a href="about.html"><li>About Us</li></a>-->
+<!--            <a href="contact.html"><li>Contact Us</li></a>-->
+<!--            <a href="login.html"><li>Log In</li></a>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+<details>
+    <summary></summary>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="landlords.html">LandLord</a>
+        <a href="tenant.html">Tenant</a>
+        <a href="FAQ.html">FAQ</a>
+        <!--                <a href="about.html">About Us</a>-->
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Log In</a>
+    </nav>
+</details>
+<header>Tenant/Students</header>
+<p class="contentone">RentGuide will accept offer of renting their houses. As per our expertise of Selling and Renting we will make sure your home is all good to sell or rent.
+    Just need to fillup this Form and Owners and Lanlords are Welcomed to join our RentGuide Family.</p>
+
+<form class="form">
+    <h2>Contact Info</h2>
+    <div class="row">
+        <div class="col">
+            <label>First Name : </label>
+            <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <label>Last Name : </label>
+            <input type="text" class="form-control" placeholder="Last name">
+        </div>
+        <div class="col">
+            <label>Email ID : </label>
+            <input type="email" class="form-control" placeholder="xyz@gmail.com">
+        </div>
+        <div class="col">
+            <label>Phone (Cell): </label>
+            <input type="text" class="form-control" placeholder="Phone(Cell)">
+        </div>
+        <div class="col">
+            <label>Phone (Work): </label>
+            <input type="text" class="form-control" placeholder="Phone(Work)">
+        </div>
+        
+    </div>
+    <br>
+    <h2>Tell Us What You're Looking For</h2>
+    <br>
+    <!--</form>-->
+    <!--<h2>Address</h2>-->
+    <!--<form >-->
+
+
+    <div class="form-group">
+        <label for="MoveInDate">Move in Date</label>
+        <input type="date" class="form-control" id="moveInDate" >
+    </div>
+    <div class="form-group">
+        <label for="cmbRentalType">Type of Rental</label>
+        <select name="cmbRentalType" id="cmbRentalType" data-native-menu="false" class="select-control">
+            <option>Type Of Rental</option>
+            <option value="APT">Apartment</option>
+            <option value="CD">Condo</option>
+            <option value="BM">Basement</option>
+            <option value="TH">TownHouse</option>
+            <option value="AY">Any</option>
+        </select>
+     
+       
+    </div>
+    <div class="form-group">
+        <label for="Bedrooms">Bedrooms</label>
+        <input type="text" class="form-control" id="bedRooms" placeholder="Bedrooms">
+    </div>
+    <div class="form-row">
+        <div class="form-group ">
+            <label for="Bathrooms">Bathrooms</label>
+            <input type="text" class="form-control" id="bathrooms" placeholder="Bathrooms">
+        </div>
+       <div class="
+       form-group">
+       <label for="TermOfTenancy">Term Of Tenancy</label>
+       <select name="termOfTenancy" id="termOfTenancy" data-native-menu="false" class="select-control">
+        <option>Term of Tenancy</option>
+        <option value="Mth">3-6 Month</option>
+        <option value="year">1 Year</option>
+        <option value="other"> Other </option>
+        
+    </select>
+
+       </div>
+        <div class="form-group ">
+            <label for="rentPriceRange">Rent Price Range</label>
+            <input type="text" class="form-control" id="rentPriceRange" placeholder="Rent Price range">
+        </div>
+        <div class="form-group ">
+            <label for="petFriendly">Pet Friendly</label>
+            <input type="text" class="form-control" id="petFriendly" placeholder="Pet Friendly">
+        </div>
+    </div>
+    <br>
+    <h1>
+       Other Features You're Looking for 
+    </h1>
+    
+        <label for="Comments" class="form-group">Comments</label>
+        <textarea class="form-control"  id="comments" placeholder="Comments" rows="2" cols="50">
+        </textarea>
+       
+    
+    
+    </div>
+    <br>
+    <!--    <button type="submit" class="btnSubmit">Submit</button>-->
+    <button class="btnSubmit">
+        Submit
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+        <span class="fourth"></span>
+    </button>
+
+</form>
+<br>
+
+<!--Footer Starts HERE-->
+<footer class="footer">
+    <nav class="menuone">
+        <div class="wrapper">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="landlords.html"><li>Landlord</li></a>
+                <a href="tenant.html"><li>Tenant</li></a>
+                <a href="FAQ.html"><li>FAQ</li></a>
+              <a href="about.html"><li>About Us</li></a>
+                <a href="contact.html"><li>Contact Us</li></a>
+                <a href="login.html"><li>Log In</li></a>
+            </ul>
+         </div>
+      </nav>
+    <div class="wrapper">
+        <p>&copy; <a href="#">RentGuide</a>. All rights reserved 2017.</p>
+    </div>
+</footer>
+<!--Footer Ends HERE-->
+</body>
+</html>
