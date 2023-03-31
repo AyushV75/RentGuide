@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=10., maximum-scale=1.0, user-scalable=no">
+
+        <title>Landlords</title>
+        <script src="assets/js/lib/jquery-2.1.4.js"></script>
+        <script src="assets/js/lib/jquery.validate.js"></script>
+        <!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
+        <!--    <link rel="stylesheet" href="assets/css/lib/jquery.mobile-1.4.5.css">-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+
+        <script src="assets/js/database.js"></script>
+        <script src="assets/js/DAL.js"></script>
+        <script src="assets/js/eventclass.js"></script>
+        <script src="assets/js/facade.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/global.js"></script>
+    </head>
+    
+    <body>
+        <!--Header Starts HERE-->
+        <header class="header">
+            <div class="wrapper">
+                <h1>RentGuide</h1>
+            </div>
+            
+        </header>
+        <!--Header Ends HERE-->
+        <details>
+            <summary></summary>
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="landlords.html">LandLord</a>
+                <a href="tenant.html">Tenant</a>
+                <a href="FAQ.html">FAQ</a>
+                <!--                <a href="about.html">About Us</a>-->
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Log In</a>
+            </nav>
+        </details>
+        <!--Main Body Starts HERE-->
+        <div class="main">
+            <div class="wrapper">
+
+                <!--Contact Detail Entry-->
+                <div class="booking-details">
+                    <h3>Log In</h3>
+                    <br>
+                    <form class="login-frm">
+<!--                        <div class="row">-->
+                            <div class="form-group">
+                        <span class="name">Username</span>
+                        <input type="text" class="form-control" name="username" placeholder="Username Please" required="true" /><br />
+                            </div>
+                        <br>
+                            <div class="form-group">
+                        <span class="name">Password</span>
+                        <input type="password" class="form-control" name="password" placeholder="Password Please" required="true" /><br />
+                            </div>
+                                <br>
+
+
+
+                         <div class="login-control">
+                          <button class="btnReset" id="btnReset" name="btnReset">
+                          Reset
+                          <span class="first"></span>
+                          <span class="second"></span>
+                          <span class="third"></span>
+                          <span class="fourth"></span>
+                      </button>
+                          <button class="btnLogIn" id="btnLogIn" name="btnLogIn">
+                              Log In
+                              <span class="first"></span>
+                              <span class="second"></span>
+                              <span class="third"></span>
+                              <span class="fourth"></span>
+                          </button>
+                         </div>
+<!--                          <a href="index.html" class="form-control">Go Home</a></div>-->
+<!--                        </div>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Main Body Ends HERE-->
+
+        <!--Footer Starts HERE-->
+        <footer class="footer">
+            <nav class="menuone">
+                <div class="wrapper">
+                    <ul>
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="landlords.html"><li>Landlord</li></a>
+                        <a href="tenant.html"><li>Tenant</li></a>
+                        <a href="FAQ.html"><li>FAQ</li></a>
+                        <a href="about.html"><li>About Us</li></a>
+                        <a href="contact.html"><li>Contact Us</li></a>
+                        <a href="login.html"><li>Log In</li></a>
+                    </ul>
+                </div>
+            </nav>
+            <div class="wrapper">
+                <p>&copy; <a href="#">RentGuide</a>. All rights reserved 2023.</p>
+            </div>
+        </footer>
+        <!--Footer Ends HERE-->
+    </body>
+</html>
