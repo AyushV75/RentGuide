@@ -1,74 +1,46 @@
-// function doValidate_frmLandlord(){
-//     var form = $("#frmLandlord");
+// function doValidate_frmLogin(){
+//     let form = $("#frm_Login");
 //     form.validate({
 //         rules:{
-//             txtFirstName:{
-//                 required:true
-//             },
-//             txtLastName:{
-//                 required:true
-//             },
-//             txtEmail:{
+//             userName:{
 //                 required:true,
-//                 emailcheck:true
+//                 minlength:2,
+//                 maxlength:20
 //             },
-//             buildingName:{
-//                 required:true
-//             },
-//             streetAddress:{
-//                 required: true
-//             },
-//             inputCity:{
-//                 required: true
-//             },
-//             // cmbState:{
-//             //     // required:false
-//             //
-//             // },
-//             postalCode:{
+//             userPassword:{
 //                 required: true,
-//                 postcheck:true
+//                 passWordCheck: true
 //             }
+//
 //         },
 //         messages:{
-//             txtFirstName: {
-//                 required:"Please enter First Name"
+//             userName: {
+//                 required:"Please enter user name"
 //             },
-//             txtLastName: {
-//                 required:"Please enter last Name"
-//             },
-//             txtEmail: {
-//                 required:"Please enter your email",
-//                 emailcheck: "Please enter valid Email"
-//             },
-//             buildingName: {
-//                 required: "Please enter Building Name"
-//             },
-//             streetAddress: {
-//                 required : "Please enter Street Address"
-//             },
-//             inputCity: {
-//                 required: "Please enter City name"
-//             },
-//             // cmbState: {
-//             //     // required: "Please enter state"
-//             // },
-//             postalCode: {
-//                 required: "Please enter Postal Code",
-//                 postcheck: "Please Enter valid Postal Code"
+//             userPassword: {
+//                 required:"Please enter password",
+//                 passWordCheck: "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 //             }
+//
+//
+//
 //         }
 //     });
 //     return form.valid();
 // }
-// jQuery.validator.addMethod("emailcheck",
+// jQuery.validator.addMethod("passWordCheck",
 //     function (value, element){
-//         var  EmailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-//         return EmailRegex.test(value) ;
+//         let passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})$/;
+//         return passRegex.test(value);
 //     });
-//
-// jQuery.validator.addMethod("postcheck",
-//     function (value,elements){
-//         var postRegex= /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
-//         return postRegex.test(value);
-//     });
+// // jQuery.validator.addMethod("emailcheck",
+// //     function (value, element){
+// //         var  EmailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+// //         return EmailRegex.test(value) ;
+// //     });
+// //
+// // jQuery.validator.addMethod("postcheck",
+// //     function (value,elements){
+// //         var postRegex= /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
+// //         return postRegex.test(value);
+// //     });

@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=10., maximum-scale=1.0, user-scalable=no">
 
-        <title>Landlords</title>
+        <title>Login</title>
         <script src="assets/js/lib/jquery-2.1.4.js"></script>
         <script src="assets/js/lib/jquery.validate.js"></script>
         <!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
@@ -17,7 +17,8 @@
         <script src="assets/js/facade.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/global.js"></script>
-    </head>
+        <script src="assets/js/collapse.js"></script>
+     </head>
     
     <body>
         <!--Header Starts HERE-->
@@ -48,16 +49,19 @@
                 <div class="booking-details">
                     <h3>Log In</h3>
                     <br>
-                    <form class="login-frm">
+                    <form class="login-frm" id="frm_Login">
 <!--                        <div class="row">-->
                             <div class="form-group">
                         <span class="name">Username</span>
-                        <input type="text" class="form-control" name="username" placeholder="Username Please" required="true" /><br />
+                        <input type="text" id="userName" class="form-control" name="username" placeholder="Username Please" required /><br />
                             </div>
                         <br>
                             <div class="form-group">
                         <span class="name">Password</span>
-                        <input type="password" class="form-control" name="password" placeholder="Password Please" required="true" /><br />
+                        <input type="password" id="userPassword" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"placeholder="Password Please"
+                        />
+                                <input type="checkbox"  class="showPassword" onclick="myFunction()">Show Password
+                                <br />
                             </div>
                                 <br>
 
@@ -71,8 +75,8 @@
                           <span class="third"></span>
                           <span class="fourth"></span>
                       </button>
-                          <button class="btnLogIn" id="btnLogIn" name="btnLogIn">
-                              Log In
+                             <button class="btnLogIn" id="btnLogIn" name="btnLogIn"> Log In
+
                               <span class="first"></span>
                               <span class="second"></span>
                               <span class="third"></span>

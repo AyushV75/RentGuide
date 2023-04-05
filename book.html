@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="author" content="RentGuide" />
-        <meta name="description" content="RentGuide" />
-        <meta name="keywords" content=" " />
-        
-        <title>RentGuide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=10., maximum-scale=1.0, user-scalable=no">
+
+        <title>Booking</title>
+        <script src="assets/js/lib/jquery-2.1.4.js"></script>
+        <script src="assets/js/lib/jquery.validate.js"></script>
+        <!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
+        <!--    <link rel="stylesheet" href="assets/css/lib/jquery.mobile-1.4.5.css">-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+
         <script src="assets/js/database.js"></script>
         <script src="assets/js/DAL.js"></script>
         <script src="assets/js/eventclass.js"></script>
         <script src="assets/js/facade.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/global.js"></script>
-        <!--ADING CSS HERE-->
-        <link rel="icon" type="image/png" href="images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     </head>
     
     <body>
@@ -66,23 +67,20 @@
                     <span class="house-location">Fairway RD S, Montreal, QC</span><br />
                     <span class="house-price">(CAD) $1200000</span>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at porttitor urna. Class aptent taciti sociosqu 
-                        ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vitae libero nec felis rhoncus sollicitudin 
-                        at non felis. Praesent posuere arcu sit amet augue viverra, feugiat tempus metus placerat. Aliquam iaculis mi 
-                        at diam gravida venenatis. Suspendisse pretium ultricies libero, id congue nibh pretium ut. Sed condimentum nec
-                         diam eget elementum. Donec sed purus congue, varius massa a, tristique ipsum. Maecenas ac nunc ipsum. Sed in
-                          molestie nulla. Duis nisi nibh, pellentesque ac ultricies eget, lacinia vitae elit. Cras laoreet purus 
-                          tellus. Vestibulum a condimentum felis, id euismod ligula.
+                        This stunning two-story home features four bedrooms, three bathrooms, and a two-car garage. The main level boasts an
+                        open floor plan with a spacious living room, dining area, and modern kitchen with stainless steel appliances and a
+                        center island. The living room features large windows that provide ample natural light and a cozy gas fireplace perfect
+                        for chilly evenings. The main level also includes a guest bedroom and full bathroom, making it ideal for hosting
+                        visitors.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at porttitor urna. Class aptent taciti sociosqu 
-                        ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vitae libero nec felis rhoncus sollicitudin 
-                        at non felis. Praesent posuere arcu sit amet augue viverra, feugiat tempus metus placerat. Aliquam iaculis mi 
-                        at diam gravida venenatis. Suspendisse pretium ultricies libero, id congue nibh pretium ut. Sed condimentum nec
-                         diam eget elementum. Donec sed purus congue, varius massa a, tristique ipsum. Maecenas ac nunc ipsum. Sed in
-                          molestie nulla. Duis nisi nibh, pellentesque ac ultricies eget, lacinia vitae elit. Cras laoreet purus 
-                          tellus. Vestibulum a condimentum felis, id euismod ligula.
-                    </p>
+                        Upstairs, the primary bedroom suite is a luxurious retreat with a large walk-in closet and en suite bathroom with dual
+                        vanities, a soaking tub, and a separate shower. Two additional bedrooms share a full bathroom and a bonus room provides
+                        flexible space for a home office, playroom, or gym. The home's outdoor space includes a covered patio and a beautifully
+                        landscaped backyard with a fire pit, perfect for summer barbecues and outdoor entertaining. With its convenient location
+                        close to schools, parks, and shopping, this home is the perfect blend of comfort, style, and functionality.
+                        </p>
+
                 </div>
                 
                 <!--Client Booking Detail Entry-->
@@ -90,21 +88,21 @@
                     <h3>Your Booking Details</h3>
                     <form>
                         <span class="name">First Name</span>
-                        <input type="text" class="form-control" name="first_name" placeholder="First Name Please" /><br />
-                        
+                        <input type="text" id="fNameBook" class="form-control" name="first_name" placeholder="First Name Please" /><br />
+                        <br>
                         <span class="name">Last Name</span>
-                        <input type="text" class="form-control" name="last_name" placeholder="Last Name Please" /><br />
-                        
+                        <input type="text" id="lNameBook" class="form-control" name="last_name" placeholder="Last Name Please" /><br />
+                        <br>
                         <span class="name">E-Mail</span>
-                        <input type="email" class="form-control" name="email" placeholder="E-Mail Please" /><br />
-                        
+                        <input type="email" id="eMailBook" class="form-control" name="email" placeholder="E-Mail Please" /><br />
+                        <br>
                         <span class="name">Conatct No.</span>
-                        <input type="tel" class="form-control" class="form-control" name="contact" placeholder="Contact Number Please" /><br />
-                        
-                        <span class="name">Address</span> 
-                        <textarea name="address" class="form-control" placeholder="Your Address Please"></textarea><br />
+                        <input type="tel" id="ContactNoBook" class="form-control" class="form-control" name="contact" placeholder="Contact Number Please" /><br />
+                        <br>
+                        <span class="name">Address</span>
+                        <textarea name="address" id="addressBook" class="form-control" placeholder="Your Address Please"></textarea><br />
 
-
+                        <br>
                         <button class="btnBookNow" id="btnBookNow" name="btnBookNow">
                             Book Now
                             <span class="first"></span>

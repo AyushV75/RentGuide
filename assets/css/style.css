@@ -10,6 +10,7 @@ body{
     color: #4f6d7a;
 }
 
+
 header{
    /*// font-family: "Comic Sans MS";*/
     font-size: xx-large;
@@ -22,6 +23,10 @@ header{
 p{
     margin-top : 25px;
 
+}
+.showPassword{
+    display: flex;
+    flex-direction: row;
 }
 .btnReset{
     /*width: 150px;*/
@@ -164,7 +169,9 @@ p{
         100% {
             opacity: 0;
         }
-    } */
+    }
+
+*/
  
 
 
@@ -190,6 +197,22 @@ body {
 .btnBookNow{
     position: relative;
     left:45%;
+    margin-top: 20px;
+
+}
+.btnResetB{
+    /*width: 150px;*/
+    /*height: 50px;*/
+    position: relative;
+    left:25%;
+    margin-top: 20px;
+
+}
+.btnBookNow{
+    /*width: 200px;*/
+    /*height: 50px;*/
+    position: relative;
+    left:20%;
     margin-top: 20px;
 
 }

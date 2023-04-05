@@ -4,10 +4,22 @@ $(document).ready(function (){
 });
 function initial(){
 
-    $("#btnSubmits").on("click",btnSubmits_click);
+    // $("#btnSubmits").on("click",btnSubmits_click);
+    $("#btnLogIn").on("click",btnLogIn_click);
+    $("#btnSend").on("click",btnSend_click);
+    $("#btnBookNow").on("click",btnBookNow_click);
 }
-function btnSubmits_click(){
-    addLandLord();
+// function btnSubmits_click(){
+//     addLandLord();
+// }
+function btnLogIn_click(){
+    addLoginInfo();
+}
+function btnSend_click(){
+    addContactInfo();
+}
+function btnBookNow_click(){
+    addBookingInfo();
 }
 function initialDB(){
     try{
