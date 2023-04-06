@@ -1,46 +1,129 @@
-// function doValidate_frmLogin(){
-//     let form = $("#frm_Login");
+// // function doValidate_frmLogin(){
+// //     let form = $("#frm_Login");
+// //     form.validate({
+// //         rules:{
+// //             userName:{
+// //                 required:true,
+// //                 minlength:2,
+// //                 maxlength:20
+// //             },
+// //             userPassword:{
+// //                 required: true,
+// //                 passWordCheck: true
+// //             }
+// //
+// //         },
+// //         messages:{
+// //             userName: {
+// //                 required:"Please enter user name"
+// //             },
+// //             userPassword: {
+// //                 required:"Please enter password",
+// //                 passWordCheck: "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+// //             }
+// //
+// //
+// //
+// //         }
+// //     });
+// //     return form.valid();
+// // }
+// // jQuery.validator.addMethod("passWordCheck",
+// //     function (value, element){
+// //         let passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})$/;
+// //         return passRegex.test(value);
+// //     });
+// // // jQuery.validator.addMethod("emailcheck",
+// // //     function (value, element){
+// // //         var  EmailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+// // //         return EmailRegex.test(value) ;
+// // //     });
+// // //
+// // // jQuery.validator.addMethod("postcheck",
+// // //     function (value,elements){
+// // //         var postRegex= /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
+// // //         return postRegex.test(value);
+// // //     });
+//
+// function doValidate_frmRegister(){
+//     var form= $("#frmRegister");
 //     form.validate({
-//         rules:{
-//             userName:{
+//         rules: {
+//             txtFullName:{
 //                 required:true,
-//                 minlength:2,
-//                 maxlength:20
+//                 rangelength:[2,20]
 //             },
-//             userPassword:{
+//             txtUserName:{
+//                 required:true,
+//                 rangelength:[2,20]
+//             },
+//             txtUserEmail:{
 //                 required: true,
-//                 passWordCheck: true
-//             }
-//
-//         },
-//         messages:{
-//             userName: {
-//                 required:"Please enter user name"
+//                 emailcheck: true
 //             },
-//             userPassword: {
-//                 required:"Please enter password",
-//                 passWordCheck: "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+//             txtPhoneNumber:{
+//                 required: true,
+//                 numbercheck: true
+//             },
+//             txtAddress1:{
+//                 required:true
+//             },
+//             txtCity:{
+//                 required:true
+//             },
+//             txtPostalCode:{
+//                 required:true,
+//                 postalcheck:true
 //             }
-//
-//
-//
+//         },
+//         messages: {
+//             txtFullName:{
+//                 required:"Please enter FullName",
+//                 rangelength: "Name must be 2-20 character long"
+//             },
+//             txtUserName:{
+//                 required:"Please enter UserName",
+//                 rangelength: "Name must be 2-20 character long"
+//             },
+//             txtUserEmail:{
+//                 required:"Please enter your email",
+//                 emailcheck: "Please enter valid Email"
+//             },
+//             txtPhoneNumber:{
+//                 required: "Please enter number",
+//                 numbercheck: "Please enter valid number"
+//             },
+//             txtAddress1:{
+//                 required:"Please enter address"
+//             },
+//             txtCity:{
+//                 required:"Please enter City"
+//             },
+//             txtPostalCode:{
+//                 required:"Please enter PostalCode",
+//                 postalcheck:"Please enter valid Postal code"
+//             }
 //         }
 //     });
 //     return form.valid();
 // }
-// jQuery.validator.addMethod("passWordCheck",
+// jQuery.validator.addMethod("emailcheck",
 //     function (value, element){
-//         let passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})$/;
-//         return passRegex.test(value);
+//         var  EmailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//         return EmailRegex.test(value) ;
 //     });
-// // jQuery.validator.addMethod("emailcheck",
-// //     function (value, element){
-// //         var  EmailRegex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-// //         return EmailRegex.test(value) ;
-// //     });
-// //
-// // jQuery.validator.addMethod("postcheck",
-// //     function (value,elements){
-// //         var postRegex= /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
-// //         return postRegex.test(value);
-// //     });
+// jQuery.validator.addMethod("rangecheck",
+//     function (value,element){
+//         var RangeRegex= /^[0-5]$/;
+//         return RangeRegex.test(value);
+//     });
+// jQuery.validator.addMethod("numbercheck",
+//     function (value,element){
+//         var numRegex= /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+//         return numRegex.test(value);
+//     });
+// jQuery.validator.addMethod("postalcheck",
+//     function (value,elements){
+//         var postRegex= /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
+//         return postRegex.test(value);
+//     });

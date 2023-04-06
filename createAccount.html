@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=10., maximum-scale=1.0, user-scalable=no">
+
+  <title>Create Account</title>
+  <script src="assets/js/lib/jquery-2.1.4.js"></script>
+  <script src="assets/js/lib/jquery.validate.js"></script>
+  <!--    <script src="assets/js/lib/jquery.mobile-1.4.5.js"></script>-->
+  <!--    <link rel="stylesheet" href="assets/css/lib/jquery.mobile-1.4.5.css">-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <script src="assets/js/database.js"></script>
+  <script src="assets/js/DAL.js"></script>
+  <script src="assets/js/eventclass.js"></script>
+  <script src="assets/js/facade.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/global.js"></script>
+  <script src="assets/js/collapse.js"></script>
+</head>
+
+<body>
+<!--Header Starts HERE-->
+<header class="header">
+  <div class="wrapper">
+    <h1>RentGuide</h1>
+  </div>
+
+</header>
+<!--Header Ends HERE-->
+<details>
+  <summary></summary>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="landlords.html">LandLord</a>
+    <a href="tenant.html">Tenant</a>
+    <a href="FAQ.html">FAQ</a>
+    <!--                <a href="about.html">About Us</a>-->
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Log In</a>
+  </nav>
+</details>
+<!--Main Body Starts HERE-->
+<!--<div class="main">-->
+<!--  <div class="wrapper">-->
+
+<!--    &lt;!&ndash;Contact Detail Entry&ndash;&gt;-->
+<!--    <div class="booking-details">-->
+<!--      <h3>Create Account</h3>-->
+<!--      <br>-->
+<!--      <form class="CreatingAccount-frm" id="frm_Account">-->
+<!--        &lt;!&ndash;                        <div class="row">&ndash;&gt;-->
+
+<!--          <div class="form-group">-->
+<!--            <label>First Name : </label>-->
+<!--            <input type="text"  id="txtFirstNameA" class="form-control" placeholder="First name">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label>Last Name : </label>-->
+<!--            <input type="text" id="txtLastNameA" class="form-control" placeholder="Last name">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label>Email ID : </label>-->
+<!--            <input type="email"  id="txtEmailIdA" class="form-control" placeholder="xyz@gmail.com">-->
+<!--          </div>-->
+
+<!--        <div class="form-group">-->
+<!--          <label class="name">Username or Email</label>-->
+<!--          <input type="text" id="userNameA" class="form-control" name="username" placeholder="Username Please" required /><br />-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--          <label class="name">Password</label>-->
+<!--          <input type="password" id="userPasswordA" class="form-control" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"placeholder="Password Please"-->
+<!--          />-->
+
+<!--        </div>-->
+
+
+<!--        <input type="checkbox"  class="showPassword" onclick="myFunction()">Show Password-->
+
+
+
+
+
+<!--        <div class="login-control">-->
+<!--          <button class="btnReset" id="btnReset" name="btnReset">-->
+<!--            Reset-->
+<!--            <span class="first"></span>-->
+<!--            <span class="second"></span>-->
+<!--            <span class="third"></span>-->
+<!--            <span class="fourth"></span>-->
+<!--          </button>-->
+<!--          <button class="btnCreate" id="btnCreate" name="btnCreate">Sign up-->
+<!--            <span class="first"></span>-->
+<!--            <span class="second"></span>-->
+<!--            <span class="third"></span>-->
+<!--            <span class="fourth"></span>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;                          <a href="index.html" class="form-control">Go Home</a></div>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--Main Body Ends HERE-->
+
+<section class="maincontainer">
+  <div class="container1">
+    <div class="title">Registration</div>
+    <div class="content1">
+      <form action="#" id="frmRegister">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" id="txtFullName" placeholder="Enter your name" required >
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" id="txtUserName" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="txtUserEmail" placeholder="Enter your email" required >
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" id="txtPhoneNumber" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address 1</span>
+            <textarea type="text" id="txtAddress1"  placeholder="Enter your address" required ></textarea>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text"  id="txtCity" placeholder="Enter your City" required >
+          </div>
+          <div class="input-box">
+            <span class="details">State</span>
+            <select name="cmbState" id="cmbState" required >
+              <option value="ON">Onatrio</option>
+              <option value="BC">British Columbia</option>
+              <option value="AB">Alberta</option>
+              <option value="NL">NewFoundland</option>
+              <option value="MB">Manitoba</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Postal Code</span>
+            <input type="text" id="txtPostalCode"  placeholder="Enter your Postal Code" required>
+          </div>
+        </div>
+        <div class="gender-details" >
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <button  id="btnRegister" name="btnRegister" class="btnRegister">Register
+
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+            <span class="fourth"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</section>
+<!--Footer Starts HERE-->
+<footer class="footer">
+  <nav class="menuone">
+    <div class="wrapper">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="landlords.html"><li>Landlord</li></a>
+        <a href="tenant.html"><li>Tenant</li></a>
+        <a href="FAQ.html"><li>FAQ</li></a>
+        <a href="about.html"><li>About Us</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        <a href="login.html"><li>Log In</li></a>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <p>&copy; <a href="#">RentGuide</a>. All rights reserved 2023.</p>
+  </div>
+</footer>
+<!--Footer Ends HERE-->
+</body>
+</html>

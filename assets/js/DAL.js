@@ -1,10 +1,10 @@
 var CustomLandlord={
     insert: function(objLandlord) {
         db.transaction(function(lax){
-            var sql="INSERT INTO landlord(firstName, lastName, eMail, buildName, unitNumber, streetAdd, city,postalCode) VALUES(?,?,?,?,?,?,?,?);";
-            var options = [objLandlord.firstName, objLandlord.lastName, objLandlord.eMail,objLandlord.buildName, objLandlord.unitNumber, objLandlord.streetAdd, objLandlord.city,objLandlord.postalCode];
+            var sql="INSERT INTO landlords(firstName, lastName, eMail, buildName, unitNumber, streetAdd, city,stateId,postalCode,priceRent,squareFootage,bedRoom,bathRoom,parking,petFriendly) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+            var options = [objLandlord.firstName, objLandlord.lastName,objLandlord. eMail,objLandlord. buildName,objLandlord. unitNumber,objLandlord. streetAdd,objLandlord. city,objLandlord.stateId,objLandlord.postalCode,objLandlord.priceRent,objLandlord.squareFootage,objLandlord.bedRoom,objLandlord.bathRoom,objLandlord.parking,objLandlord.petFriendly];
             function successTransaction(){
-                console.info("Success: Insert transaction successful");
+                console.info("Success: Insert Landlord successful");
             }
 
             lax.executeSql(sql, options, successTransaction, errorHandler);
@@ -48,6 +48,19 @@ var Book={
                 console.info("Success book Successfully");
             }
             bx.executeSql(sql3,option4,successTransaction4,errorHandler);
+        });
+
+    }
+}
+var Register={
+    insert:function (objRegister){
+        db.transaction(function (rex){
+              var sql4="INSERT INTO  register(fullName,userNameA,regiEmail,phoneNumber,addressR,cityR,stateID,postalCodeR)VALUES(?,?,?,?,?,?,?,?)";
+              var option5=[objRegister.fullName,objRegister.userNameA,objRegister.regiEmail,objRegister.phoneNumber,objRegister.addressR,objRegister.cityR,objRegister.stateID,objRegister.postalCodeR];
+              function successtransaction5(){
+                  console.info("Success Register Successfully");
+              }
+              rex.executeSql(sql4,option5,successtransaction5,errorHandler);
         });
 
     }

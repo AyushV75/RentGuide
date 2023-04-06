@@ -1,4 +1,4 @@
-var Event = function(firstName, lastName, eMail, buildName, unitNumber, streetAdd, city,postalCode){
+var LandlordEvent = function(firstName, lastName, eMail, buildName, unitNumber, streetAdd, city,stateId,postalCode,priceRent,squareFootage,bedRoom,bathRoom,parking,petFriendly){
     this.firstName=firstName;
     this.lastName=lastName;
     this.eMail=eMail;
@@ -6,14 +6,14 @@ var Event = function(firstName, lastName, eMail, buildName, unitNumber, streetAd
     this.unitNumber=unitNumber;
     this.streetAdd=streetAdd;
     this.city=city;
-    // this.stateId=stateId;
+    this.stateId=stateId;
     this.postalCode=postalCode;
-    // this.priceRent=priceRent;
-    // this.squareFootage= squareFootage;
-    // this.bedRoom=bedRoom;
-    // this.bathRoom=bathRoom;
-    // this.parking=parking;
-    // this.petFriendly=petFriendly;
+    this.priceRent=priceRent;
+    this.squareFootage= squareFootage;
+    this.bedRoom=bedRoom;
+    this.bathRoom=bathRoom;
+    this.parking=parking;
+    this.petFriendly=petFriendly;
 }
 var LoginEvent = function (userName, passWord){
     this.userName= userName;
@@ -34,4 +34,14 @@ var BookEvent= function (fNameB,lNameB,eMailB,contactNumberB,addRessBook){
     this.eMailB=eMailB;
     this.contactNumberB=contactNumberB;
     this.addRessBook=addRessBook;
+}
+var RegisterEvent= function (fullName,userNameA,regiEmail,phoneNumber,addressR,cityR,stateID,postalCodeR){
+    this.fullName=fullName;
+    this.userNameA=userNameA;
+    this.regiEmail=regiEmail;
+    this. phoneNumber=phoneNumber;
+    this.addressR=addressR;
+    this.cityR=cityR;
+    this.stateID=stateID;
+    this.postalCodeR=postalCodeR;
 }

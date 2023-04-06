@@ -52,17 +52,22 @@
                     <form class="login-frm" id="frm_Login">
 <!--                        <div class="row">-->
                             <div class="form-group">
-                        <span class="name">Username</span>
+                        <label class="name">Username</label>
                         <input type="text" id="userName" class="form-control" name="username" placeholder="Username Please" required /><br />
                             </div>
-                        <br>
+
                             <div class="form-group">
-                        <span class="name">Password</span>
-                        <input type="password" id="userPassword" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"placeholder="Password Please"
+                        <label class="name">Password</label>
+                        <input type="password" id="userPassword" class="form-control" required name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"placeholder="Password Please"
                         />
-                                <input type="checkbox"  class="showPassword" onclick="myFunction()">Show Password
-                                <br />
+
                             </div>
+                        <br>
+
+                        <input type="checkbox"  class="showPassword" onclick="myFunction()">Show Password
+
+                        <br />
+                        <a href="createAccount.html" class="create-Account">Create Account</a>
                                 <br>
 
 

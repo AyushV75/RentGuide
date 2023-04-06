@@ -4,17 +4,28 @@ $(document).ready(function (){
 });
 function initial(){
 
-    // $("#btnSubmits").on("click",btnSubmits_click);
+    $("#btnSubmits").on("click",btnSubmits_click);
     $("#btnLogIn").on("click",btnLogIn_click);
     $("#btnSend").on("click",btnSend_click);
     $("#btnBookNow").on("click",btnBookNow_click);
+    $("#btnReset").on("click",btnReset_click);
+    $("#btnRegister").on("click",btnRegister_click);
 }
-// function btnSubmits_click(){
-//     addLandLord();
-// }
+function btnSubmits_click(){
+    addLandLord();
+}
+function btnRegister_click(){
+    accountRegister();
+}
+function btnReset_click(){
+    $("#userName").val(null);
+    $("#userPassword").val(null);
+
+}
 function btnLogIn_click(){
     addLoginInfo();
 }
+
 function btnSend_click(){
     addContactInfo();
 }
