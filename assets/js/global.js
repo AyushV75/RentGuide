@@ -10,9 +10,13 @@ function initial(){
     $("#btnBookNow").on("click",btnBookNow_click);
     $("#btnReset").on("click",btnReset_click);
     $("#btnRegister").on("click",btnRegister_click);
+    $("#btnSubmitT").on("click",btnSubmitT_click);
 }
 function btnSubmits_click(){
     addLandLord();
+}
+function btnSubmitT_click(){
+    addTenant();
 }
 function btnRegister_click(){
     accountRegister();

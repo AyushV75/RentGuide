@@ -27,6 +27,26 @@ function addLandLord(){
 //     //     }
 //
 }
+function addTenant(){
+    console.info("Tenant listing added");
+    var firstNameT = $("#txtFirstNameT").val();
+    var lastNameT = $("#txtLastNameT").val();
+    var eMailT = $("#txtEmailIdT").val();
+     var phoneTenantC = $("#txtPhoneTenantC").val();
+    var phoneTenantW = $("#txtPhoneTenantW").val();
+    var moveDateT = $("#moveInDate").val();
+     var rentalTypeID = $("#cmbRentalType").val();
+    var bedroomT = $("#bedRoomsT").val();
+    var bathroomT = $("#bathroomsT").val();
+     var termOfTenancyT = $("#termOfTenancy").val();
+    var rentPriceRange = $("#rentPriceRange").val();
+    var petFriendlyT = $("#petFriendlyT").val();
+    var commentsT = $("#comments").val();
+
+    var objTenant = new TenantEvent(firstNameT,lastNameT,eMailT,phoneTenantC,phoneTenantW,moveDateT,rentalTypeID,bedroomT,bathroomT,termOfTenancyT,rentPriceRange,petFriendlyT,commentsT);
+
+    Tenant.insert(objTenant);
+}
 function addLoginInfo(){
         // if(doValidate_frmLogin()){
                 console.info("Login Successfully");

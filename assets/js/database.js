@@ -35,10 +35,28 @@ var DB= {
                 "bathRoom INTEGER," +
                 "parKing VARCHAR(10)," +
                 "petFriendly VARCHAR(10));";
+
+            var tenantTable="CREATE TABLE IF  NOT EXISTS tenant("+
+                "id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                "firstNameT VARCHAR(20) NOT NULL," +
+                "lastNameT VARCHAR(20)," +
+                "eMailT VARCHAR(30)," +
+                "phoneTenantC INTEGER,"+
+                "phoneTenantW INTEGER,"+
+                "moveDateT DATE,"+
+                "rentalTypeID INTEGER,"+
+                "bedroomT INTEGER,"+
+                "bathroomT INTEGER,"+
+                "termOfTenancyT INTEGER,"+
+                "rentPriceRange INTEGER,"+
+                "petFriendlyT VARCHAR(10),"+
+                "commentsT VARCHAR(100));";
+
             var loginFormTable = " CREATE TABLE IF NOT EXISTS login(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "userName VARCHAR(50) NOT NULL," +
                 "passWord VARCHAR(20));";
+
             var contactInfoTable = "CREATE TABLE IF NOT EXISTS contact(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "fName VARCHAR(20)," +
@@ -46,6 +64,7 @@ var DB= {
                 "eMailC VARCHAR(50)," +
                 "contactNumber INTEGER," +
                 "addRess VARCHAR(50));";
+
             var bookingInfoTable = "CREATE TABLE IF NOT EXISTS book(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "fNameB VARCHAR(20)," +
@@ -53,6 +72,7 @@ var DB= {
                 "eMailB VARCHAR(50)," +
                 "contactNumberB INTEGER," +
                 "addRessBook VARCHAR(50));";
+
             var registerAccountTable = "CREATE TABLE IF NOT EXISTS register(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "fullName VARCHAR(20)," +
@@ -85,6 +105,9 @@ var DB= {
             function successCallbackFifth() {
                 console.info("Registration table created successfully");
             }
+            function successCallbackSixth() {
+                console.info("Tenant table created successfully");
+            }
 
 
             rx.executeSql(createLandlordTable, options, successCallBackOne, errorHandler);
@@ -92,6 +115,7 @@ var DB= {
             rx.executeSql(contactInfoTable, options, successCallbackThird, errorHandler);
             rx.executeSql(bookingInfoTable, options, successCallbackFourth, errorHandler);
             rx.executeSql(registerAccountTable, options, successCallbackFifth, errorHandler);
+            rx.executeSql(tenantTable, options, successCallbackSixth, errorHandler);
         });
     }
     // },

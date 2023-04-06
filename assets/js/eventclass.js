@@ -45,3 +45,18 @@ var RegisterEvent= function (fullName,userNameA,regiEmail,phoneNumber,addressR,c
     this.stateID=stateID;
     this.postalCodeR=postalCodeR;
 }
+var TenantEvent= function (firstNameT,lastNameT,eMailT,phoneTenantC,phoneTenantW,moveDateT,rentalTypeID,bedroomT,bathroomT,termOfTenancyT,rentPriceRange,petFriendlyT,commentsT){
+    this.firstNameT=firstNameT;
+    this.lastNameT=lastNameT;
+    this.eMailT=eMailT;
+    this.phoneTenantC=phoneTenantC;
+    this.phoneTenantW=phoneTenantW;
+    this.moveDateT=moveDateT;
+    this.rentalTypeID=rentalTypeID;
+    this.bedroomT=bedroomT;
+    this.bathroomT=bathroomT;
+    this.termOfTenancyT=termOfTenancyT;
+    this.rentPriceRange=rentPriceRange;
+    this.petFriendlyT=petFriendlyT;
+    this.commentsT=commentsT;
+}

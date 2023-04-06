@@ -11,7 +11,19 @@ var CustomLandlord={
         });
     },
 };
+var Tenant={
+    insert:function (objTenant){
+        db.transaction(function (tex){
+           var sql5="INSERT INTO tenant(firstNameT,lastNameT,eMailT,phoneTenantC,phoneTenantW,moveDateT,rentalTypeID,bedroomT,bathroomT,termOfTenancyT,rentPriceRange,petFriendlyT,commentsT) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+           var option6=[objTenant.firstNameT,objTenant.lastNameT,objTenant.eMailT,objTenant.phoneTenantC,objTenant.phoneTenantW,objTenant.moveDateT,objTenant.rentalTypeID,objTenant.bedroomT,objTenant.bathroomT,objTenant.termOfTenancyT,objTenant.rentPriceRange,objTenant.petFriendlyT,objTenant.commentsT];
 
+            function successTransaction6(){
+                console.info("Success Tenant Successfully");
+            }
+            tex.executeSql(sql5,option6,successTransaction6,errorHandler);
+        });
+    }
+}
 
 var User={
     insert:function (objLogin){
